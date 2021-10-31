@@ -15,7 +15,7 @@ echo   :: Presione 4 - Menu de Office 2019               ::
 echo   :: Presione 5 - Cargar Servidor y Validar Windows ::
 echo   :: Presione 6 - Para Salir                        ::
 echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-choice /c 12345 >nul
+choice /c 123456 >nul
 SET PRINOPTION=%ERRORLEVEL%
 IF %PRINOPTION% EQU 1 (
 	goto :Process
@@ -277,7 +277,7 @@ goto :Principal
 	echo   :: Presione 3 - Pro                               ::
 	echo   :: Presione 4 - Volver al Menu anterior           ::	
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-	choice /c 12345 >nul
+	choice /c 1234 >nul
 	SET VERSIONWIN=%ERRORLEVEL%
 	IF %VERSIONWIN% EQU 1 (
 		goto :MENUHOME11
@@ -302,7 +302,7 @@ goto :Principal
 	echo   :: Presione 2 - Home Single Language              ::
 	echo   :: Presione 3 - Volver al Menu anterior           ::	
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-	choice /c 1234 >nul
+	choice /c 123 >nul
 	SET HOME=%ERRORLEVEL%
 	IF %HOME% EQU 1 (
 	Echo Procederemos a introducir la clave de edicion Home.
@@ -364,7 +364,7 @@ goto :Principal
 	echo   :: Presione 4 - Pro para Workstations N           ::
 	echo   :: Presione 5 - Volver al Menu anterior           ::	
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-	choice /c 1234567 >nul
+	choice /c 12345 >nul
 	SET PRO=%ERRORLEVEL%
 	IF %PRO% EQU 1 (
 	Echo Procederemos a introducir la clave de edicion Pro .
@@ -400,7 +400,7 @@ echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo   :: Presione 1 - Eleja su version de Windows       ::
 echo   :: Presione 2 - Volver al Menu Principal          ::
 echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-choice /c 1234 >nul
+choice /c 12 >nul
 SET WINSERVEROPTION=%ERRORLEVEL%
 IF %WINSERVEROPTION% EQU 1 (
 	goto :VERMENUWINDOWSSERVER
@@ -465,7 +465,7 @@ echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo   :: Presione 1 - Elija su paquete de Office 2019   ::
 echo   :: Presione 2 - Volver al Menu Principal          ::
 echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-choice /c 1234 >nul
+choice /c 12 >nul
 SET OFFICEOPTION=%ERRORLEVEL%
 IF %OFFICEOPTION% EQU 1 (
 	goto :VERMENUOFFICE
@@ -544,7 +544,7 @@ cls>nul
 	echo   :: Presione 4 - Servidor 4                        ::
 	echo   :: Presione 5 - Volver al Menu Principal          ::		
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-	choice /c 1234 >nul
+	choice /c 12345 >nul
 	SET SERVID=%ERRORLEVEL%
 	IF %SERVID% EQU 1 (
 	Echo Procederemos a introducir el servidor kms7.msguides.com.
