@@ -11,7 +11,7 @@ echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo   :: Presione 1 - Menu de Windows 10                ::
 echo   :: Presione 2 - Menu de Windows 11                ::
 echo   :: Presione 3 - Menu de Windows Server 2019       ::
-echo   :: Presione 4 - Menu de Office 2019               ::
+echo   :: Presione 4 - Menu de Office 2019 y 2021        ::
 echo   :: Presione 5 - Cargar Servidor y Validar Windows ::
 echo   :: Presione 6 - Para Salir                        ::
 echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -27,7 +27,7 @@ IF %PRINOPTION% EQU 3 (
 	goto :MENUWINDOWSSERVER
 )
 IF %PRINOPTION% EQU 4 (
-	goto :OFFICE2019
+	goto :OFFICE
 )
 IF %PRINOPTION% EQU 5 (
 	goto :ACTIVATIONWINDOWS
@@ -455,27 +455,31 @@ IF %WINSERVEROPTION% EQU 2 (
 	slmgr /ipk WVDHN-86M7X-466P6-VHXV7-YY726
 	goto :ACTIVATION
 ::Apartir de esta parte comienza el menu de Office 2019
-:OFFICE2019
+:OFFICE
 cls>nul
 cls
 echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-echo   :: Activacion de Office 2019                      ::
-echo   :: Menu de Windows 10                             ::
+echo   :: Activacion de Office 2019 y 2021               ::
+echo   :: Sub Menu                                       ::
 echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo   :: Presione 1 - Elija su paquete de Office 2019   ::
-echo   :: Presione 2 - Volver al Menu Principal          ::
+echo   :: Presione 2 - Elija su paquete de Office 2021   ::
+echo   :: Presione 3 - Volver al Menu Principal          ::
 echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-choice /c 12 >nul
+choice /c 123 >nul
 SET OFFICEOPTION=%ERRORLEVEL%
 IF %OFFICEOPTION% EQU 1 (
-	goto :VERMENUOFFICE
+	goto :VERMENUOFFICE19
 )
 IF %OFFICEOPTION% EQU 2 (
+	goto :VERMENUOFFICE21
+)
+IF %OFFICEOPTION% EQU 3 (
 	Echo Volviendo al Menu Principal
 	pause
 	goto :Principal
 )
-:VERMENUOFFICE
+:VERMENUOFFICE19
 cls>nul
 cls
 echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -496,7 +500,7 @@ IF %EDITOFFICEOPTION% EQU 1 (
 	echo ============================================================================
 	echo Activating your Office...
 	cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:6MWKP >nul&cscript //nologo ospp.vbs /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP >nul&set i=1
-	goto :ACTIVATIONOFFICE
+	goto :ACTIVATIONOFFICE19
 )
 IF %EDITOFFICEOPTION% EQU 2 (
 	Echo Procederemos a introducir la clave de Project 2019.
@@ -505,7 +509,7 @@ IF %EDITOFFICEOPTION% EQU 2 (
 	echo ============================================================================
 	echo Activating your Office...
 	cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:PKD2B >nul&cscript //nologo ospp.vbs /inpkey:B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B >nul&set i=1
-	goto :ACTIVATIONOFFICE
+	goto :ACTIVATIONOFFICE19
 )
 IF %EDITOFFICEOPTION% EQU 3 (
 	Echo Procederemos a introducir la clave de Visio 2019.
@@ -514,17 +518,71 @@ IF %EDITOFFICEOPTION% EQU 3 (
 	echo ============================================================================
 	echo Activating your Office...
 	cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:7VCBB >nul&cscript //nologo ospp.vbs /inpkey:9BGNQ-K37YR-RQHF2-38RQ3-7VCBB >nul&set i=1
-	goto :ACTIVATIONOFFICE
+	goto :ACTIVATIONOFFICE19
 )
 IF %EDITOFFICEOPTION% EQU 4 (
-	Echo Volviendo al Menu de Office 2019
+	Echo Volviendo al Menu de Office 2019 y 2021
 	pause
-	goto :OFFICE2019
+	goto :OFFICE
+)
+:VERMENUOFFICE21
+cls>nul
+cls
+echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo   :: Elija su paquete de Office 2021                ::
+echo   :: Sub Menu                                       ::
+echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo   :: Presione 1 - ProPlus 2021                      ::
+echo   :: Presione 2 - Project 2021                      ::
+echo   :: Presione 3 - Visio 2021                        ::
+echo   :: Presione 4 - Voler al Menu anterior            ::
+echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
+choice /c 1234 >nul
+SET EDITOFFICEOPTION=%ERRORLEVEL%
+IF %EDITOFFICEOPTION% EQU 1 (
+	Echo Procederemos a introducir la clave de ProPlus 2019.
+	echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+	echo.
+	echo ============================================================================
+	echo Activating your Office...
+	cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:6F7TH >nul&cscript //nologo ospp.vbs /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH >nul&set i=1
+	goto :ACTIVATIONOFFICE21
+)
+IF %EDITOFFICEOPTION% EQU 2 (
+	Echo Procederemos a introducir la clave de Project 2019.
+	echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+	echo.
+	echo ============================================================================
+	echo Activating your Office...
+	cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:QV9H8 >nul&cscript //nologo ospp.vbs /inpkey:KFTNWT-C6WBT-8HMGF-K9PRX-QV9H8 >nul&set i=1
+	goto :ACTIVATIONOFFICE21
+)
+IF %EDITOFFICEOPTION% EQU 3 (
+	Echo Procederemos a introducir la clave de Visio 2019.
+	echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+	echo.
+	echo ============================================================================
+	echo Activating your Office...
+	cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:K2HT4 >nul&cscript //nologo ospp.vbs /inpkey:KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4 >nul&set i=1
+	goto :ACTIVATIONOFFICE21
+)
+IF %EDITOFFICEOPTION% EQU 4 (
+	Echo Volviendo al Menu de Office 2019 y 2021
+	pause
+	goto :OFFICE
 )
 ::Apartir de esta parte comienza el menu para cargar el Servidor KMS y realizar la Activacion
 
-:ACTIVATIONOFFICE
+:ACTIVATIONOFFICE19
 if %i%==1 set KMS_Sev=kms7.MSGuides.com
+if %i%==2 set KMS_Sev=kms8.MSGuides.com
+if %i%==3 set KMS_Sev=kms9.MSGuides.com
+if %i%==4 goto notsupported
+cscript //nologo ospp.vbs /sethst:%KMS_Sev% >nul&echo ============================================================================&echo.&echo.
+cscript //nologo ospp.vbs /act | find /i "successful" && (echo.&echo ============================================================================&echo.&echo ============================================================================&choice /n /c YN /m "Desea realizar otra operación [Y,N]?" & if errorlevel 2 exit) || (echo La conexion al servidor KMS fallo! Intentando conectarme a otro ... & echo Por favor espera... & echo. & echo. & set /a i+=1 & goto ACTIVATIONOFFICE)
+pause
+:ACTIVATIONOFFICE21
+if %i%==1 set KMS_Sev=sethst:s8.uk.to
 if %i%==2 set KMS_Sev=kms8.MSGuides.com
 if %i%==3 set KMS_Sev=kms9.MSGuides.com
 if %i%==4 goto notsupported
