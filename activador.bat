@@ -579,7 +579,7 @@ if %i%==2 set KMS_Sev=kms8.MSGuides.com
 if %i%==3 set KMS_Sev=kms9.MSGuides.com
 if %i%==4 goto notsupported
 cscript //nologo ospp.vbs /sethst:%KMS_Sev% >nul&echo ============================================================================&echo.&echo.
-cscript //nologo ospp.vbs /act | find /i "successful" && (echo.&echo ============================================================================&echo.&echo ============================================================================&choice /n /c YN /m "Desea realizar otra operación [Y,N]?" & if errorlevel 2 exit) || (echo La conexion al servidor KMS fallo! Intentando conectarme a otro ... & echo Por favor espera... & echo. & echo. & set /a i+=1 & goto ACTIVATIONOFFICE)
+cscript //nologo ospp.vbs /act | find /i "successful" && (echo.&echo ============================================================================&echo.&echo ============================================================================&choice /n /c YN /m "Desea realizar otra operación [Y,N]?" & if errorlevel 2 exit) || (echo La conexion al servidor KMS fallo! Intentando conectarme a otro ... & echo Por favor espera... & echo. & echo. & set /a i+=1 & goto ACTIVATIONOFFICE19)
 pause
 :ACTIVATIONOFFICE21
 if %i%==1 set KMS_Sev=sethst:s8.uk.to
@@ -587,7 +587,7 @@ if %i%==2 set KMS_Sev=kms8.MSGuides.com
 if %i%==3 set KMS_Sev=kms9.MSGuides.com
 if %i%==4 goto notsupported
 cscript //nologo ospp.vbs /sethst:%KMS_Sev% >nul&echo ============================================================================&echo.&echo.
-cscript //nologo ospp.vbs /act | find /i "successful" && (echo.&echo ============================================================================&echo.&echo ============================================================================&choice /n /c YN /m "Desea realizar otra operación [Y,N]?" & if errorlevel 2 exit) || (echo La conexion al servidor KMS fallo! Intentando conectarme a otro ... & echo Por favor espera... & echo. & echo. & set /a i+=1 & goto ACTIVATIONOFFICE)
+cscript //nologo ospp.vbs /act | find /i "successful" && (echo.&echo ============================================================================&echo.&echo ============================================================================&choice /n /c YN /m "Desea realizar otra operación [Y,N]?" & if errorlevel 2 exit) || (echo La conexion al servidor KMS fallo! Intentando conectarme a otro ... & echo Por favor espera... & echo. & echo. & set /a i+=1 & goto ACTIVATIONOFFICE21)
 pause
 :ACTIVATIONWINDOWS
 cls>nul
