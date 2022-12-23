@@ -1,5 +1,5 @@
 @echo off
-title Activacion de Windows 10, 11, Server 2019, Office 2019
+title Activacion de Windows 10, 11, Server 2019, Office 2016, 2019 y 2021
 color f2
 :Principal
 cls>nul
