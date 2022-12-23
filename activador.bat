@@ -441,19 +441,19 @@ IF %WINSERVEROPTION% EQU 2 (
 	cls
 	Echo Procederemos a introducir la clave de edicion Datacenter.
 	slmgr /ipk WMDGN-G9PQG-XVVXX-R3X43-63DFG
-	goto :ACTIVATION
+	goto :ACTIVATIONWINDOWS
 :MENUSTANDARD
 	cls>nul
 	cls
 	Echo Procederemos a introducir la clave de edicion Standard.
 	slmgr /ipk N69G4-B89J2-4G8F4-WWYCC-J464C
-	goto :ACTIVATION
+	goto :ACTIVATIONWINDOWS
 :MENUESSENTIALS
 	cls>nul
 	cls
 	Echo Procederemos a introducir la clave de edicion Essentials.
 	slmgr /ipk WVDHN-86M7X-466P6-VHXV7-YY726
-	goto :ACTIVATION
+	goto :ACTIVATIONWINDOWS
 ::Apartir de esta parte comienza el menu de Office 2019
 :OFFICE
 cls>nul
