@@ -18,13 +18,13 @@ echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
 choice /c 123456 >nul
 SET PRINOPTION=%ERRORLEVEL%
 IF %PRINOPTION% EQU 1 (
-	goto :Process
+	goto :VERMENU
 )
 IF %PRINOPTION% EQU 2 (
-	goto :Process11
+	goto :VERMENU11
 )
 IF %PRINOPTION% EQU 3 (
-	goto :MENUWINDOWSSERVER
+	goto :VERMENUWINDOWSSERVER
 )
 IF %PRINOPTION% EQU 4 (
 	goto :OFFICE
@@ -38,30 +38,11 @@ pause
 exit
 )
 ::Apartir de esta parte comienza el menu de Windows 10
-:Process
-cls>nul
-cls
-echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-echo   :: Activacion de Windows 10                       ::
-echo   :: Menu de Windows 10                             ::
-echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-echo   :: Presione 1 - Eleja su version de Windows 10    ::
-echo   :: Presione 2 - Volver al Menu Principal          ::
-echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-choice /c 12 >nul
-SET WINOPTION=%ERRORLEVEL%
-IF %WINOPTION% EQU 1 (
-	goto :VERMENU
-)
-IF %WINOPTION% EQU 2 (
-Echo Volviendo al Menu Principal
-pause
-goto :Principal
-)
 :VERMENU
 	cls>nul 
 	cls
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Activacion de Windows 10                       ::
 	echo   :: Eleja su Edicion de Windows 10                 ::
 	echo   :: Sub Menu                                       ::
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -105,17 +86,17 @@ goto :Principal
 	IF %HOME% EQU 1 (
 	Echo Esta edicion no necesita clave, por favor proceda con la opcion 2 del menu principal.
 	pause
-	goto :Process
+	goto :Principal
 	)
 	IF %HOME% EQU 2 (
 	Echo Esta edicion no necesita clave, por favor proceda con la opcion 2 del menu principal.
 	pause
-	goto :Process
+	goto :Principal
 	)
 	IF %HOME% EQU 3 (
 	Echo Esta edicion no necesita clave, por favor proceda con la opcion 2 del menu principal.
 	pause
-	goto :Process
+	goto :Principal
 	)
 	IF %HOME% EQU 4 (
 	goto :VERMENU
@@ -137,15 +118,11 @@ goto :Principal
 	Echo Procederemos a introducir la clave de edicion Education.
 	slmgr /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2
 	goto :ACTIVATIONWINDOWS
-	pause
-	goto :Process
 	)
 	IF %EDU% EQU 2 (
 	Echo Procederemos a introducir la clave de edicion Education N.
 	slmgr /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ
 	goto :ACTIVATIONWINDOWS
-	pause
-	goto :Process
 	)
 	IF %EDU% EQU 3 (
 	goto :VERMENU
@@ -245,30 +222,11 @@ goto :Principal
 	goto :VERMENU
 	)
 ::Apartir de esta parte comienza el menu de Windows 11
-:Process11
-cls>nul
-cls
-echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-echo   :: Activacion de Windows 11                       ::
-echo   :: Menu de Windows 11                             ::
-echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-echo   :: Presione 1 - Eleja su version de Windows 11    ::
-echo   :: Presione 2 - Volver al Menu Principal          ::
-echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-choice /c 12 >nul
-SET WINOPTION=%ERRORLEVEL%
-IF %WINOPTION% EQU 1 (
-	goto :VERMENU11
-)
-IF %WINOPTION% EQU 2 (
-Echo Volviendo al Menu Principal
-pause
-goto :Principal
-)
 :VERMENU11
 	cls>nul 
 	cls
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Activacion de Windows 11                       ::
 	echo   :: Eleja su Edicion de Windows 11                 ::
 	echo   :: Sub Menu                                       ::
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -289,7 +247,7 @@ goto :Principal
 		goto :MENUPRO11
 	)
 	IF %VERSIONWIN% EQU 4 (
-		goto :Process11
+		goto :Principal
 	)
 :MENUHOME11
 	cls>nul
@@ -308,15 +266,11 @@ goto :Principal
 	Echo Procederemos a introducir la clave de edicion Home.
 	slmgr /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99
 	goto :ACTIVATIONWINDOWS
-	pause
-	goto :Process11
 	)
 	IF %HOME% EQU 2 (
 	Echo Procederemos a introducir la clave de edicion Home Single Language.
 	slmgr /ipk 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH
 	goto :ACTIVATIONWINDOWS
-	pause
-	goto :Process11
 	)
 	IF %HOME% EQU 3 (
 	goto :VERMENU11
@@ -338,15 +292,11 @@ goto :Principal
 	Echo Procederemos a introducir la clave de edicion Education.
 	slmgr /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2
 	goto :ACTIVATIONWINDOWS
-	pause
-	goto :Process11
 	)
 	IF %EDU% EQU 2 (
 	Echo Procederemos a introducir la clave de edicion Education N.
 	slmgr /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ
 	goto :ACTIVATIONWINDOWS
-	pause
-	goto :Process11
 	)
 	IF %EDU% EQU 3 (
 	goto :VERMENU11
@@ -390,30 +340,11 @@ goto :Principal
 	goto :VERMENU11
 	)
 :: Apartir de esta parte comienza el menu de Windows Server 2019
-:MENUWINDOWSSERVER
-cls>nul
-cls
-echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-echo   :: Activacion de Windows Server 2019              ::
-echo   :: Menu de Windows Server 2019                    ::
-echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-echo   :: Presione 1 - Eleja su version de Windows       ::
-echo   :: Presione 2 - Volver al Menu Principal          ::
-echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
-choice /c 12 >nul
-SET WINSERVEROPTION=%ERRORLEVEL%
-IF %WINSERVEROPTION% EQU 1 (
-	goto :VERMENUWINDOWSSERVER
-)
-IF %WINSERVEROPTION% EQU 2 (
-	Echo Volviendo al Menu Principal
-	pause
-	goto :Principal
-)
 :VERMENUWINDOWSSERVER
 	cls>nul 
 	cls
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Activacion de Windows Server 2019              ::
 	echo   :: Eleja su Edicion de Windows Server 2019        ::
 	echo   :: Sub Menu                                       ::
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -434,7 +365,7 @@ IF %WINSERVEROPTION% EQU 2 (
 		goto :MENUESSENTIALS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
-		goto :MENUWINDOWSSERVER
+		goto :Principal
 	)
 :MENUDATACENTER
 	cls>nul
