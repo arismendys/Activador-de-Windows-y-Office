@@ -1,12 +1,12 @@
 @echo off
-title Activacion de Windows & Office
+title Activacion de Windows y Office
 color f2
 :INICIO
 cls>nul
 cls
 echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo   ::                      MarteTeam                         ::
-echo   ::             Activador de Windows & Office              ::
+echo   ::             Activador de Windows y Office              ::
 echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo   :: Este activador contiene los siguientes sistemas,       ::
 echo   :: Windows 7, 8.1, 10, 11                                 ::  
