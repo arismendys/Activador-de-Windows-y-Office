@@ -521,7 +521,7 @@ echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::
 choice /c 1234 >nul
 SET EDITOFFICEOPTION=%ERRORLEVEL%
 IF %EDITOFFICEOPTION% EQU 1 (
-	Echo Procederemos a introducir la clave de ProPlus 2019.
+	Echo Procederemos a introducir la clave de ProPlus 2021.
 	echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
 	echo.
 	echo ============================================================================
@@ -530,7 +530,7 @@ IF %EDITOFFICEOPTION% EQU 1 (
 	goto :ACTIVATIONOFFICE21
 )
 IF %EDITOFFICEOPTION% EQU 2 (
-	Echo Procederemos a introducir la clave de Project 2019.
+	Echo Procederemos a introducir la clave de Project 2021.
 	echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
 	echo.
 	echo ============================================================================
@@ -539,7 +539,7 @@ IF %EDITOFFICEOPTION% EQU 2 (
 	goto :ACTIVATIONOFFICE21
 )
 IF %EDITOFFICEOPTION% EQU 3 (
-	Echo Procederemos a introducir la clave de Visio 2019.
+	Echo Procederemos a introducir la clave de Visio 2021.
 	echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
 	echo.
 	echo ============================================================================
