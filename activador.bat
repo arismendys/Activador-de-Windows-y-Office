@@ -999,8 +999,6 @@ IF %OFFICEOPTION% EQU 4 (
 	goto :VERMENUOFFICE21
 )
 IF %OFFICEOPTION% EQU 5 (
-	Echo Volviendo al Menu Principal
-	pause
 	goto :Principal
 )
 ::Apartir de esta parte comienza el menu de Office 2013
