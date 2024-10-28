@@ -116,18 +116,18 @@ goto :eof
 :::INICIO
 ::cls>nul
 REM cls
-	REM echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	REM echo   :: MarteTeam                                              ::
-	REM echo   :: Activador de Windows y Office                          ::
-	REM echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	REM echo   :: Este activador contiene los siguientes sistemas,       ::
-	REM echo   :: Windows 7, 8.1, 10, 11                                 ::  
-	REM echo   :: Server 2008, 2008 R2, 2012, 2012 R2, 2016, 2019, 2022  ::
-	REM echo   :: Office 2013, 2016, 2019, 2021                          ::
-	REM echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	REM echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	REM echo   :: MarteTeam                                                    ::
+	REM echo   :: Activador de Windows y Office                                ::
+	REM echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	REM echo   :: Este activador contiene los siguientes sistemas,             ::
+	REM echo   :: Windows 7, 8.1, 10, 11                                       ::  
+	REM echo   :: Server 2008, 2008 R2, 2012, 2012 R2, 2016, 2019, 2022, 2025  ::
+	REM echo   :: Office 2013, 2016, 2019, 2021                                ::
+	REM echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::pause
 :Principal
-mode con cols=64 lines=11
+mode con cols=68 lines=11
 cls>nul
 cls
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -838,9 +838,10 @@ mode con cols=64 lines=13
 	echo   :: Presione 5 - Menu de Windows Server 2016               ::
 	echo   :: Presione 6 - Menu de Windows Server 2019               ::
 	echo   :: Presione 7 - Menu de Windows Server 2022               ::
-	echo   :: Presione 8 - Volver al Menu anterior                   ::	
+	echo   :: Presione 8 - Menu de Windows Server 2025               ::
+	echo   :: Presione 9 - Volver al Menu anterior                   ::	
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	choice /c 12345678 >nul
+	choice /c 123456789 >nul
 	SET WINVER=%ERRORLEVEL%
 	IF %WINVER% EQU 1 (
 		goto :VERMENUWINDOWSSERVER2008
@@ -864,6 +865,9 @@ mode con cols=64 lines=13
 		goto :VERMENUWINDOWSSERVER2022
 	)
 	IF %WINVER% EQU 8 (
+		goto :VERMENUWINDOWSSERVER2025
+	)
+	IF %WINVER% EQU 9 (
 		goto :VERMENWIN
 	)
 :: Apartir de esta parte comienza el menu de Windows Server 2008
@@ -1054,9 +1058,10 @@ mode con cols=64 lines=13
 	echo   :: Presione 1 - Datacenter                                ::
 	echo   :: Presione 2 - Standard                                  ::
 	echo   :: Presione 3 - Essentials                                ::
-	echo   :: Presione 4 - Volver al Menu anterior                   ::	
+	echo   :: Presione 4 - Convertir version de Evaluacion           ::
+	echo   :: Presione 5 - Volver al Menu anterior                   ::	
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	choice /c 1234 >nul
+	choice /c 12345 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
 		Echo Procederemos a introducir la clave de edicion Datacenter.
@@ -1074,7 +1079,38 @@ mode con cols=64 lines=13
 		goto :ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
+		goto :VERCONVERSERVER2019
+	)
+	IF %VERSIONWINSERVER% EQU 5 (
 		goto :VERMENWINSERVER
+	)
+:VERCONVERSERVER2019
+	mode con cols=72 lines=12
+	cls>nul 
+	cls
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Conversion de versiones de evaluacion de Windows Server 2019   ::
+	echo   :: Eleja su Edicion de Windows Server 2019                        ::
+	echo   :: Sub Menu                                                       ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Presione 1 - Datacenter                                        ::
+	echo   :: Presione 2 - Standard                                          ::
+	echo   :: Presione 3 - Volver al Menu anterior                           ::	
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	choice /c 123 >nul
+	SET VERSIONWINSERVER=%ERRORLEVEL%
+	IF %VERSIONWINSERVER% EQU 1 (
+		Echo Procederemos a introducir la clave de edicion Datacenter.
+		Dism /online /Set-Edition:ServerDatacenter /AcceptEula /ProductKey:WMDGN-G9PQG-XVVXX-R3X43-63DFG
+		goto :ACTIVATIONWINDOWS
+	)
+	IF %VERSIONWINSERVER% EQU 2 (
+		Echo Procederemos a introducir la clave de edicion Standard.
+		Dism /online /set-edition:ServerStandard /AcceptEula /productkey:N69G4-B89J2-4G8F4-WWYCC-J464C
+		goto :ACTIVATIONWINDOWS
+	)
+	IF %VERSIONWINSERVER% EQU 3 (
+		goto :VERMENUWINDOWSSERVER2019
 	)
 ::Apartir de esta parte comienza el menu de Windows Server 2022
 :VERMENUWINDOWSSERVER2022
@@ -1089,9 +1125,10 @@ mode con cols=64 lines=13
 	echo   :: Presione 1 - Datacenter                                ::
 	echo   :: Presione 2 - Datacenter Azure Edition                  ::
 	echo   :: Presione 3 - Standard                                  ::
-	echo   :: Presione 4 - Volver al Menu anterior                   ::	
+	echo   :: Presione 4 - Convertir version de Evaluacion           ::
+	echo   :: Presione 5 - Volver al Menu anterior                   ::	
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	choice /c 1234 >nul
+	choice /c 12345 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
 		Echo Procederemos a introducir la clave de edicion Datacenter.
@@ -1109,7 +1146,105 @@ mode con cols=64 lines=13
 		goto :ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
+		goto :VERCONVERSERVER2022
+	)
+	IF %VERSIONWINSERVER% EQU 5 (
 		goto :VERMENWINSERVER
+	)
+:VERCONVERSERVER2022
+	mode con cols=72 lines=12
+	cls>nul 
+	cls
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Conversion de versiones de evaluacion de Windows Server 2022   ::
+	echo   :: Eleja su Edicion de Windows Server 2022                        ::
+	echo   :: Sub Menu                                                       ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Presione 1 - Datacenter                                        ::
+	echo   :: Presione 2 - Standard                                          ::
+	echo   :: Presione 3 - Volver al Menu anterior                           ::	
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	choice /c 123 >nul
+	SET VERSIONWINSERVER=%ERRORLEVEL%
+	IF %VERSIONWINSERVER% EQU 1 (
+		Echo Procederemos a introducir la clave de edicion Datacenter.
+		Dism /online /Set-Edition:ServerDatacenter /AcceptEula /ProductKey:WX4NM-KYWYW-QJJR4-XV3QB-6VM33
+		goto :ACTIVATIONWINDOWS
+	)
+	IF %VERSIONWINSERVER% EQU 2 (
+		Echo Procederemos a introducir la clave de edicion Standard.
+		Dism /online /set-edition:ServerStandard /AcceptEula /productkey:VDYBN-27WPP-V4HQT-9VMD4-VMK7H
+		goto :ACTIVATIONWINDOWS
+	)
+	IF %VERSIONWINSERVER% EQU 3 (
+		goto :VERMENUWINDOWSSERVER2022
+	)
+::Apartir de esta parte comienza el menu de Windows Server 2025
+:VERMENUWINDOWSSERVER2025
+	mode con cols=64 lines=12
+	cls>nul 
+	cls
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Activacion de Windows Server 2025                      ::
+	echo   :: Eleja su Edicion de Windows Server 2025                ::
+	echo   :: Sub Menu                                               ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Presione 1 - Datacenter                                ::
+	echo   :: Presione 2 - Datacenter Azure Edition                  ::
+	echo   :: Presione 3 - Standard                                  ::
+	echo   :: Presione 4 - Convertir version de Evaluacion           ::
+	echo   :: Presione 5 - Volver al Menu anterior                   ::	
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	choice /c 12345 >nul
+	SET VERSIONWINSERVER=%ERRORLEVEL%
+	IF %VERSIONWINSERVER% EQU 1 (
+		Echo Procederemos a introducir la clave de edicion Datacenter.
+		slmgr /ipk D764K-2NDRG-47T6Q-P8T8W-YP6DF
+		goto :ACTIVATIONWINDOWS
+	)
+	IF %VERSIONWINSERVER% EQU 2 (
+		Echo Procederemos a introducir la clave de edicion Datacenter Azure Edition.
+		slmgr /ipk XGN3F-F394H-FD2MY-PP6FD-8MCRC
+		goto :ACTIVATIONWINDOWS
+	)
+	IF %VERSIONWINSERVER% EQU 3 (
+		Echo Procederemos a introducir la clave de edicion Standard.
+		slmgr /ipk TVRH6-WHNXV-R9WG3-9XRFY-MY832
+		goto :ACTIVATIONWINDOWS
+	)
+	IF %VERSIONWINSERVER% EQU 4 (
+		goto :VERCONVERSERVER2025
+	)
+	IF %VERSIONWINSERVER% EQU 5 (
+		goto :VERMENWINSERVER
+	)
+:VERCONVERSERVER2025
+	mode con cols=72 lines=12
+	cls>nul 
+	cls
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Conversion de versiones de evaluacion de Windows Server 2025   ::
+	echo   :: Eleja su Edicion de Windows Server 2025                        ::
+	echo   :: Sub Menu                                                       ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Presione 1 - Datacenter                                        ::
+	echo   :: Presione 2 - Standard                                          ::
+	echo   :: Presione 3 - Volver al Menu anterior                           ::	
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	choice /c 123 >nul
+	SET VERSIONWINSERVER=%ERRORLEVEL%
+	IF %VERSIONWINSERVER% EQU 1 (
+		Echo Procederemos a introducir la clave de edicion Datacenter.
+		Dism /online /Set-Edition:ServerDatacenter /AcceptEula /ProductKey:D764K-2NDRG-47T6Q-P8T8W-YP6DF
+		goto :ACTIVATIONWINDOWS
+	)
+	IF %VERSIONWINSERVER% EQU 2 (
+		Echo Procederemos a introducir la clave de edicion Standard.
+		Dism /online /set-edition:ServerStandard /AcceptEula /productkey:TVRH6-WHNXV-R9WG3-9XRFY-MY832
+		goto :ACTIVATIONWINDOWS
+	)
+	IF %VERSIONWINSERVER% EQU 3 (
+		goto :VERMENUWINDOWSSERVER2025
 	)
 ::Apartir de esta parte comienza los menus de Office
 :OFFICE
