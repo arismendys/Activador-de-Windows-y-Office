@@ -2,7 +2,7 @@
 :: NOMBRE:	Activacion de Windows y Office
 :: DESCRIPCIÓN:	Esta Herramienta sirve para realizar la Activacion de varias versiones de Windows y Office
 :: AUTOR:	MarteTeam.
-:: VERSIÓN:	3.1.0.0
+:: VERSIÓN:	3.2.0.0
 :: WEBSITE:	http://marteteam.com
 :: =========================================================================================================
 
@@ -148,7 +148,7 @@ IF %PRINOPTION% EQU 2 (
 	goto :OFFICE
 )
 IF %PRINOPTION% EQU 3 (
-	goto :ACTIVATIONWINDOWS
+	goto :WINDOWSACTIVATION
 )
 IF %PRINOPTION% EQU 4 (
 echo.Presione una tecla para cerrar la ventana . . . 
@@ -244,14 +244,16 @@ mode con cols=64 lines=13
 	choice /c 123 >nul
 	SET STARTER=%ERRORLEVEL%
 	IF %STARTER% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion Starter.
-	slmgr /ipk 7Q28W-FT9PC-CMMYT-WHMY2-89M6G
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Starter.             ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk 7Q28W-FT9PC-CMMYT-WHMY2-89M6G>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %STARTER% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion Starter N.
-	slmgr /ipk D4C3G-38HGY-HGQCV-QCWR8-97FFR
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Starter N.           ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk D4C3G-38HGY-HGQCV-QCWR8-97FFR>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %STARTER% EQU 3 (
 	goto :VERMENU7
@@ -273,24 +275,28 @@ mode con cols=64 lines=13
 	choice /c 12345 >nul
 	SET HOME=%ERRORLEVEL%
 	IF %HOME% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion Home Basic.
-	slmgr /ipk YGFVB-QTFXQ-3H233-PTWTJ-YRYRV
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Home Basic.          ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk YGFVB-QTFXQ-3H233-PTWTJ-YRYRV>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %HOME% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion Home Basic N.
-	slmgr /ipk MD83G-H98CG-DXPYQ-Q8GCR-HM8X2
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Home Basic N.        ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk MD83G-H98CG-DXPYQ-Q8GCR-HM8X2>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %HOME% EQU 3 (
-	Echo Procederemos a introducir la clave de edicion Home Premium.
-	slmgr /ipk HPQ2-RMFJH-74XYM-BH4JX-XM76F
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Home Premium.        ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk HPQ2-RMFJH-74XYM-BH4JX-XM76F>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %HOME% EQU 4 (
-	Echo Procederemos a introducir la clave de edicion Home Premium N.
-	slmgr /ipk D3PVQ-V7M4J-9Q9K3-GG4K3-F99JM
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Home Premium N.      ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk D3PVQ-V7M4J-9Q9K3-GG4K3-F99JM>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %HOME% EQU 5 (
 	goto :VERMENU7
@@ -310,14 +316,16 @@ mode con cols=64 lines=13
 	choice /c 123 >nul
 	SET PRO=%ERRORLEVEL%
 	IF %PRO% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion Pro .
-	slmgr /ipk HYF8J-CVRMY-CM74G-RPHKF-PW487
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro.                 ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk HYF8J-CVRMY-CM74G-RPHKF-PW487>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion Pro N.
-	slmgr /ipk BKFRB-RTCT3-9HW44-FX3X8-M48M6
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro N.               ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk BKFRB-RTCT3-9HW44-FX3X8-M48M6>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 3 (
 	goto :VERMENU7
@@ -337,14 +345,16 @@ mode con cols=64 lines=13
 	choice /c 123 >nul
 	SET ULTIMATE=%ERRORLEVEL%
 	IF %ULTIMATE% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion Ultimate .
-	slmgr /ipk D4F6K-QK3RD-TMVMJ-BBMRX-3MBMV
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Ultimate.            ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk D4F6K-QK3RD-TMVMJ-BBMRX-3MBMV>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ULTIMATE% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion Ultimate N.
-	slmgr /ipk HTJK6-DXX8T-TVCR6-KDG67-97J8Q
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Ultimate N.          ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk HTJK6-DXX8T-TVCR6-KDG67-97J8Q>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ULTIMATE% EQU 3 (
 	goto :VERMENU7
@@ -365,19 +375,22 @@ mode con cols=64 lines=13
 	choice /c 1234 >nul
 	SET ENTERP=%ERRORLEVEL%
 	IF %ENTERP% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise.
-	slmgr /ipk H7X92-3VPBB-Q799D-Y6JJ3-86WC6
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise.          ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk H7X92-3VPBB-Q799D-Y6JJ3-86WC6>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise N.
-	slmgr /ipk BQ4TH-BWRRY-424Y9-7PQX2-B4WBD
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise N.        ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk BQ4TH-BWRRY-424Y9-7PQX2-B4WBD>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 3 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise N.
-	slmgr /ipk C29WB-22CC8-VJ326-GHFJW-H9DH4
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise N.        ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk C29WB-22CC8-VJ326-GHFJW-H9DH4>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 4 (
 	goto :VERMENU7
@@ -399,15 +412,15 @@ mode con cols=64 lines=13
 	choice /c 123 >nul
 	SET VERSIONWIN=%ERRORLEVEL%
 	IF %VERSIONWIN% EQU 1 (
-		goto :MENUPRO
+		goto :MENUPRO81
 	)
 	IF %VERSIONWIN% EQU 2 (
-		goto :MENUENTERPRISE
+		goto :MENUENTERPRISE81
 	)
 	IF %VERSIONWIN% EQU 3 (
 		goto :VERMENWIN
 	)
-:MENUPRO
+:MENUPRO81
 	mode con cols=64 lines=10
 	cls>nul
 	cls
@@ -422,19 +435,21 @@ mode con cols=64 lines=13
 	choice /c 1234567 >nul
 	SET PRO=%ERRORLEVEL%
 	IF %PRO% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion Pro .
-	slmgr /ipk GCRJD-8NW9H-F2CDX-CCM8D-9D6T9
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro.                 ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk GCRJD-8NW9H-F2CDX-CCM8D-9D6T9>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion Pro N.
-	slmgr /ipk HMCNV-VVBFX-7HMBH-CTY9B-B4FXY
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro N.               ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk HMCNV-VVBFX-7HMBH-CTY9B-B4FXY>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 3 (
 	goto :VERMENU81
 	)
-:MENUENTERPRISE
+:MENUENTERPRISE81
 	mode con cols=64 lines=10
 	cls>nul
 	cls
@@ -449,14 +464,16 @@ mode con cols=64 lines=13
 	choice /c 123456 >nul
 	SET ENTERP=%ERRORLEVEL%
 	IF %ENTERP% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise.
-	slmgr /ipk MHF9N-XY6XB-WVXMC-BTDCT-MKKG7
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise.          ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	slmgr /ipk MHF9N-XY6XB-WVXMC-BTDCT-MKKG7>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise N.
-	slmgr /ipk TT4HM-HN7YT-62K67-RGRQJ-JFFXW
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise N.        ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	slmgr /ipk TT4HM-HN7YT-62K67-RGRQJ-JFFXW>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 3 (
 	goto :VERMENU81
@@ -480,21 +497,21 @@ mode con cols=64 lines=13
 	choice /c 12345 >nul
 	SET VERSIONWIN=%ERRORLEVEL%
 	IF %VERSIONWIN% EQU 1 (
-		goto :MENUHOME
+		goto :MENUHOME10
 	)
 	IF %VERSIONWIN% EQU 2 (
 		goto :MENUEDUCATION
 	)
 	IF %VERSIONWIN% EQU 3 (
-		goto :MENUPRO
+		goto :MENUPRO10
 	)
 	IF %VERSIONWIN% EQU 4 (
-		goto :MENUENTERPRISE
+		goto :MENUENTERPRISE10
 	)
 	IF %VERSIONWIN% EQU 5 (
 		goto :VERMENWIN
 	)
-:MENUHOME
+:MENUHOME10
 	mode con cols=64 lines=11
 	cls>nul
 	cls
@@ -527,7 +544,7 @@ mode con cols=64 lines=13
 	IF %HOME% EQU 4 (
 	goto :VERMENU10
 		)
-:MENUEDUCATION
+:MENUEDUCATION10
 	mode con cols=64 lines=10
 	cls>nul
 	cls
@@ -542,19 +559,23 @@ mode con cols=64 lines=13
 	choice /c 123 >nul
 	SET EDU=%ERRORLEVEL%
 	IF %EDU% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion Education.
-	slmgr /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2
+	Echo   :: Introduciendo la clave de edicion Education.           ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2
 	goto :ACTIVATIONWINDOWS
 	)
 	IF %EDU% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion Education N.
-	slmgr /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ
+	Echo   :: Introduciendo la clave de edicion Education N.         ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ
 	goto :ACTIVATIONWINDOWS
 	)
 	IF %EDU% EQU 3 (
 	goto :VERMENU10
 	)
-:MENUPRO
+:MENUPRO10
 	mode con cols=64 lines=14
 	cls>nul
 	cls
@@ -573,39 +594,45 @@ mode con cols=64 lines=13
 	choice /c 1234567 >nul
 	SET PRO=%ERRORLEVEL%
 	IF %PRO% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion Pro .
-	slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro.                 ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+    cscript //nologo slmgr.vbs /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion Pro N.
-	slmgr /ipk MH37W-N47XK-V7XM9-C7227-GCQG9
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro N.               ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk MH37W-N47XK-V7XM9-C7227-GCQG9>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 3 (
-	Echo Procederemos a introducir la clave de edicion Pro Education.
-	slmgr /ipk 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro Education.       ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 4 (
-	Echo Procederemos a introducir la clave de edicion Pro Education N.
-	slmgr /ipk YVWGF-BXNMC-HTQYQ-CPQ99-66QFC
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro Education N.     ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk YVWGF-BXNMC-HTQYQ-CPQ99-66QFC>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 5 (
-	Echo Procederemos a introducir la clave de edicion Pro para Workstations.
-	slmgr /ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro Workstations.    ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 6 (
-	Echo Procederemos a introducir la clave de edicion Pro para Workstations N.
-	slmgr /ipk 9FNHH-K3HBT-3W4TD-6383H-6XYWF
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro Workstations N.  ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk 9FNHH-K3HBT-3W4TD-6383H-6XYWF>nul&set i=1&goto ACTIVATIONWINDOWS
 	)	
 	IF %PRO% EQU 7 (
 	goto :VERMENU10
 	)
-:MENUENTERPRISE
+:MENUENTERPRISE10
 	mode con cols=64 lines=13
 	cls>nul
 	cls
@@ -623,29 +650,34 @@ mode con cols=64 lines=13
 	choice /c 123456 >nul
 	SET ENTERP=%ERRORLEVEL%
 	IF %ENTERP% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise.
-	slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise.          ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise N.
-	slmgr /ipk DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise N.        ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 3 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise G.
-	slmgr /ipk YYVX9-NTFWV-6MDM3-9PT4T-4M68B
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise G.        ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk YYVX9-NTFWV-6MDM3-9PT4T-4M68B>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 4 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise G N.
-	slmgr /ipk 44RPN-FTY23-9VTTB-MP9BX-T84FV
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise G N.      ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk 44RPN-FTY23-9VTTB-MP9BX-T84FV>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 5 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise LTSC.
-	slmgr /ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise LTSC.     ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 6 (
 	goto :VERMENU10
@@ -698,14 +730,16 @@ mode con cols=64 lines=13
 	choice /c 123 >nul
 	SET HOME=%ERRORLEVEL%
 	IF %HOME% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion Home.
-	slmgr /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Home.                ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %HOME% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion Home Single Language.
-	slmgr /ipk 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Home Single Language ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %HOME% EQU 3 (
 	goto :VERMENU11
@@ -725,14 +759,16 @@ mode con cols=64 lines=13
 	choice /c 123 >nul
 	SET EDU=%ERRORLEVEL%
 	IF %EDU% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion Education.
-	slmgr /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Education.           ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %EDU% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion Education N.
-	slmgr /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Education N.         ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %EDU% EQU 3 (
 	goto :VERMENU11
@@ -754,24 +790,28 @@ mode con cols=64 lines=13
 	choice /c 12345 >nul
 	SET PRO=%ERRORLEVEL%
 	IF %PRO% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion Pro .
-	slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro.                 ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion Pro N.
-	slmgr /ipk MH37W-N47XK-V7XM9-C7227-GCQG9
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro N.               ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk MH37W-N47XK-V7XM9-C7227-GCQG9>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 3 (
-	Echo Procederemos a introducir la clave de edicion Pro para Workstations.
-	slmgr /ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro Workstations.    ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %PRO% EQU 4 (
-	Echo Procederemos a introducir la clave de edicion Pro para Workstations N.
-	slmgr /ipk 9FNHH-K3HBT-3W4TD-6383H-6XYWF
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Pro Workstations N.  ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk 9FNHH-K3HBT-3W4TD-6383H-6XYWF>nul&set i=1&goto ACTIVATIONWINDOWS
 	)	
 	IF %PRO% EQU 5 (
 	goto :VERMENU11
@@ -794,29 +834,34 @@ mode con cols=64 lines=13
 	choice /c 123456 >nul
 	SET ENTERP=%ERRORLEVEL%
 	IF %ENTERP% EQU 1 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise.
-	slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise.          ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 2 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise N.
-	slmgr /ipk DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise N.        ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 3 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise G.
-	slmgr /ipk YYVX9-NTFWV-6MDM3-9PT4T-4M68B
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise G.        ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk YYVX9-NTFWV-6MDM3-9PT4T-4M68B>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 4 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise G N.
-	slmgr /ipk 44RPN-FTY23-9VTTB-MP9BX-T84FV
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise G N.      ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk 44RPN-FTY23-9VTTB-MP9BX-T84FV>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 5 (
-	Echo Procederemos a introducir la clave de edicion para Enterprise LTSC.
-	slmgr /ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D
-	goto :ACTIVATIONWINDOWS
+	Echo   :: Introduciendo la clave de edicion Enterprise LTSC.     ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo.
+	cscript //nologo slmgr.vbs /ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %ENTERP% EQU 6 (
 	goto :VERMENU11
@@ -888,19 +933,22 @@ mode con cols=64 lines=13
 	choice /c 1234 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
-		slmgr /ipk 7M67G-PC374-GR742-YH8V4-TCBY3
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk 7M67G-PC374-GR742-YH8V4-TCBY3>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Standard.
-		slmgr /ipk TM24T-X9RMF-VWXK6-X8JC9-BFGM2
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk TM24T-X9RMF-VWXK6-X8JC9-BFGM2>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
-		Echo Procederemos a introducir la clave de edicion Enterprise.
-		slmgr /ipk YQGMW-MPWTJ-34KDK-48M3W-X4Q6V
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Enterprise.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk YQGMW-MPWTJ-34KDK-48M3W-X4Q6V>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
 		goto :VERMENWINSERVER
@@ -923,19 +971,22 @@ mode con cols=64 lines=13
 	choice /c 1234 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
-		slmgr /ipk 74YFP-3QFB3-KQT8W-PMXWJ-7M648
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk 74YFP-3QFB3-KQT8W-PMXWJ-7M648>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Standard.
-		slmgr /ipk YC6KT-GKW9T-YTKYR-T4X34-R7VHC
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk YC6KT-GKW9T-YTKYR-T4X34-R7VHC>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
-		Echo Procederemos a introducir la clave de edicion Enterprise.
-		slmgr /ipk 489J6-VHDMP-X63PK-3K798-CPX3Y
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Enterprise.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk 489J6-VHDMP-X63PK-3K798-CPX3Y>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
 		goto :VERMENWINSERVER
@@ -958,19 +1009,22 @@ mode con cols=64 lines=13
 	choice /c 1234 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
-		slmgr /ipk 48HP8-DN98B-MYWDG-T2DCC-8W83P
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk 48HP8-DN98B-MYWDG-T2DCC-8W83P>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Standard.
-		slmgr /ipk XC9B7-NBPP2-83J2H-RHMBY-92BT4
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk XC9B7-NBPP2-83J2H-RHMBY-92BT4>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
-		Echo Procederemos a introducir la clave de edicion Essentials.
-		slmgr /ipk HTDQM-NBMMG-KGYDT-2DTKT-J2MPV
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Essentials.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk HTDQM-NBMMG-KGYDT-2DTKT-J2MPV>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
 		goto :VERMENWINSERVER
@@ -993,19 +1047,22 @@ mode con cols=64 lines=13
 	choice /c 1234 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
-		slmgr /ipk W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Standard.
-		slmgr /ipk D2N9P-3P6X9-2R39C-7RTCD-MDVJX
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk D2N9P-3P6X9-2R39C-7RTCD-MDVJX>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
-		Echo Procederemos a introducir la clave de edicion Essentials.
-		slmgr /ipk KNC87-3J2TX-XB4WP-VCPJV-M4FWM
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Essentials.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk KNC87-3J2TX-XB4WP-VCPJV-M4FWM>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
 		goto :VERMENWINSERVER
@@ -1028,19 +1085,22 @@ mode con cols=64 lines=13
 	choice /c 1234 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
-		slmgr /ipk CB7KF-BWN84-R7R2Y-793K2-8XDDG
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk CB7KF-BWN84-R7R2Y-793K2-8XDDG>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Standard.
-		slmgr /ipk WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
-		Echo Procederemos a introducir la clave de edicion Essentials.
-		slmgr /ipk JCKRF-N37P4-C2D82-9YXRT-4M63B
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Essentials.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk JCKRF-N37P4-C2D82-9YXRT-4M63B>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
 		goto :VERMENWINSERVER
@@ -1064,19 +1124,22 @@ mode con cols=64 lines=13
 	choice /c 12345 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
-		slmgr /ipk WMDGN-G9PQG-XVVXX-R3X43-63DFG
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk WMDGN-G9PQG-XVVXX-R3X43-63DFG>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Standard.
-		slmgr /ipk N69G4-B89J2-4G8F4-WWYCC-J464C
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk N69G4-B89J2-4G8F4-WWYCC-J464C>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
-		Echo Procederemos a introducir la clave de edicion Essentials.
-		slmgr /ipk WVDHN-86M7X-466P6-VHXV7-YY726
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Essentials.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk WVDHN-86M7X-466P6-VHXV7-YY726>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
 		goto :VERCONVERSERVER2019
@@ -1100,14 +1163,18 @@ mode con cols=64 lines=13
 	choice /c 123 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
 		Dism /online /Set-Edition:ServerDatacenter /AcceptEula /ProductKey:WMDGN-G9PQG-XVVXX-R3X43-63DFG
-		goto :ACTIVATIONWINDOWS
+		goto :WINDOWSACTIVATION
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Standard.
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
 		Dism /online /set-edition:ServerStandard /AcceptEula /productkey:N69G4-B89J2-4G8F4-WWYCC-J464C
-		goto :ACTIVATIONWINDOWS
+		goto :WINDOWSACTIVATION
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
 		goto :VERMENUWINDOWSSERVER2019
@@ -1131,19 +1198,22 @@ mode con cols=64 lines=13
 	choice /c 12345 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
-		slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Datacenter Azure Edition.
-		slmgr /ipk NNTBV8-9K7Q8-V27C6-M2BTV-KHMXV
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de Datacenter Azure Edition.    ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk NNTBV8-9K7Q8-V27C6-M2BTV-KHMXV>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
-		Echo Procederemos a introducir la clave de edicion Standard.
-		slmgr /ipk VDYBN-27WPP-V4HQT-9VMD4-VMK7H
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk VDYBN-27WPP-V4HQT-9VMD4-VMK7H>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
 		goto :VERCONVERSERVER2022
@@ -1167,14 +1237,18 @@ mode con cols=64 lines=13
 	choice /c 123 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
 		Dism /online /Set-Edition:ServerDatacenter /AcceptEula /ProductKey:WX4NM-KYWYW-QJJR4-XV3QB-6VM33
-		goto :ACTIVATIONWINDOWS
+		goto :WINDOWSACTIVATION
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Standard.
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
 		Dism /online /set-edition:ServerStandard /AcceptEula /productkey:VDYBN-27WPP-V4HQT-9VMD4-VMK7H
-		goto :ACTIVATIONWINDOWS
+		goto :WINDOWSACTIVATION
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
 		goto :VERMENUWINDOWSSERVER2022
@@ -1198,19 +1272,22 @@ mode con cols=64 lines=13
 	choice /c 12345 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
-		slmgr /ipk D764K-2NDRG-47T6Q-P8T8W-YP6DF
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk D764K-2NDRG-47T6Q-P8T8W-YP6DF>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Datacenter Azure Edition.
-		slmgr /ipk XGN3F-F394H-FD2MY-PP6FD-8MCRC
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de Datacenter Azure Edition.    ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk XGN3F-F394H-FD2MY-PP6FD-8MCRC>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
-		Echo Procederemos a introducir la clave de edicion Standard.
-		slmgr /ipk TVRH6-WHNXV-R9WG3-9XRFY-MY832
-		goto :ACTIVATIONWINDOWS
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
+		cscript //nologo slmgr.vbs /ipk TVRH6-WHNXV-R9WG3-9XRFY-MY832>nul&set i=1&goto ACTIVATIONWINDOWS
 	)
 	IF %VERSIONWINSERVER% EQU 4 (
 		goto :VERCONVERSERVER2025
@@ -1234,14 +1311,18 @@ mode con cols=64 lines=13
 	choice /c 123 >nul
 	SET VERSIONWINSERVER=%ERRORLEVEL%
 	IF %VERSIONWINSERVER% EQU 1 (
-		Echo Procederemos a introducir la clave de edicion Datacenter.
+		Echo   :: Introduciendo la clave de edicion Datacenter.          ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
 		Dism /online /Set-Edition:ServerDatacenter /AcceptEula /ProductKey:D764K-2NDRG-47T6Q-P8T8W-YP6DF
-		goto :ACTIVATIONWINDOWS
+		goto :WINDOWSACTIVATION
 	)
 	IF %VERSIONWINSERVER% EQU 2 (
-		Echo Procederemos a introducir la clave de edicion Standard.
+		Echo   :: Introduciendo la clave de edicion Standard.            ::
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo.
 		Dism /online /set-edition:ServerStandard /AcceptEula /productkey:TVRH6-WHNXV-R9WG3-9XRFY-MY832
-		goto :ACTIVATIONWINDOWS
+		goto :WINDOWSACTIVATION
 	)
 	IF %VERSIONWINSERVER% EQU 3 (
 		goto :VERMENUWINDOWSSERVER2025
@@ -1295,30 +1376,30 @@ mode con cols=64 lines=13
 	choice /c 1234 >nul
 	SET EDITOFFICEOPTION=%ERRORLEVEL%
 	IF %EDITOFFICEOPTION% EQU 1 (
-		Echo Procederemos a introducir la clave de ProPlus 2013.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office15")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office15")&(if exist "%ProgramFiles%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office14")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office14")
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de ProPlus 2013.    ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office15")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office15")&(if exist "%ProgramFiles%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office14")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office14")
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:GVGXT >nul&cscript //nologo ospp.vbs /inpkey:YC7DK-G2NP3-2QQC3-J6H88-GVGXT >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 2 (
-		Echo Procederemos a introducir la clave de Project 2013.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office15")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office15")&(if exist "%ProgramFiles%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office14")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office14")
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de Project 2013.    ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office15")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office15")&(if exist "%ProgramFiles%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office14")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office14")
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:2342K >nul&cscript //nologo ospp.vbs /inpkey:FN8TT-7WMH6-2D4X9-M337T-2342K >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 3 (
-		Echo Procederemos a introducir la clave de Visio 2013.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office15")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office15")&(if exist "%ProgramFiles%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office14")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office14")
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de Visio 2013.      ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office15")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office15")&(if exist "%ProgramFiles%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office14")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office14\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office14")
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:RM3B3 >nul&cscript //nologo ospp.vbs /inpkey:C2FG9-N6J68-H8BTJ-BW3QX-RM3B3 >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 4 (
@@ -1341,30 +1422,30 @@ mode con cols=64 lines=13
 	choice /c 1234 >nul
 	SET EDITOFFICEOPTION=%ERRORLEVEL%
 	IF %EDITOFFICEOPTION% EQU 1 (
-		Echo Procederemos a introducir la clave de ProPlus 2016.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de ProPlus 2016.    ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:WFG99 >nul&cscript //nologo ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99 >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 2 (
-		Echo Procederemos a introducir la clave de Project 2016.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de Project 2016.    ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:G83KT >nul&cscript //nologo ospp.vbs /inpkey:YG9NW-3K39V-2T3HJ-93F3Q-G83KT >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 3 (
-		Echo Procederemos a introducir la clave de Visio 2016.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de Visio 2016.      ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:RJRJK >nul&cscript //nologo ospp.vbs /inpkey:PD3PC-RHNGV-FXJ29-8JK7D-RJRJK >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 4 (
@@ -1387,30 +1468,30 @@ mode con cols=64 lines=13
 	choice /c 1234 >nul
 	SET EDITOFFICEOPTION=%ERRORLEVEL%
 	IF %EDITOFFICEOPTION% EQU 1 (
-		Echo Procederemos a introducir la clave de ProPlus 2019.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de ProPlus 2019.    ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:6MWKP >nul&cscript //nologo ospp.vbs /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 2 (
-		Echo Procederemos a introducir la clave de Project 2019.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de Project 2019.    ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:PKD2B >nul&cscript //nologo ospp.vbs /inpkey:B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 3 (
-		Echo Procederemos a introducir la clave de Visio 2019.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de Visio 2019.      ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:7VCBB >nul&cscript //nologo ospp.vbs /inpkey:9BGNQ-K37YR-RQHF2-38RQ3-7VCBB >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 4 (
@@ -1433,30 +1514,30 @@ mode con cols=64 lines=13
 	choice /c 1234 >nul
 	SET EDITOFFICEOPTION=%ERRORLEVEL%
 	IF %EDITOFFICEOPTION% EQU 1 (
-		Echo Procederemos a introducir la clave de ProPlus 2021.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de ProPlus 2021.    ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:6F7TH >nul&cscript //nologo ospp.vbs /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 2 (
-		Echo Procederemos a introducir la clave de Project 2021.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de Project 2021.    ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:QV9H8 >nul&cscript //nologo ospp.vbs /inpkey:KFTNWT-C6WBT-8HMGF-K9PRX-QV9H8 >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 3 (
-		Echo Procederemos a introducir la clave de Visio 2021.
-		echo.&(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
-		echo.
-		echo ============================================================================
-		echo Activating your Office...
+		Echo   :: Procederemos a Introduciendo la clave de Visio 2021.      ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:K2HT4 >nul&cscript //nologo ospp.vbs /inpkey:KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4 >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
 	IF %EDITOFFICEOPTION% EQU 4 (
@@ -1468,10 +1549,19 @@ if %i%==1 set KMS_Sev=s8.uk.to
 if %i%==2 set KMS_Sev=kms8.MSGuides.com
 if %i%==3 set KMS_Sev=kms9.MSGuides.com
 if %i%==4 goto notsupported
-cscript //nologo ospp.vbs /sethst:%KMS_Sev% >nul&echo ============================================================================&echo.&echo.
-cscript //nologo ospp.vbs /act | find /i "successful" && (echo.&echo ============================================================================&echo.&echo ============================================================================&choice /n /c YN /m "Desea realizar otra operación [Y,N]?" & if errorlevel 2 exit) || (echo La conexion al servidor KMS fallo! Intentando conectarme a otro ... & echo Por favor espera... & echo. & echo. & set /a i+=1 & goto ACTIVATIONOFFICE21)
+cscript //nologo ospp.vbs /sethst:%KMS_Sev% >nul
+cscript //nologo ospp.vbs /act | find /i "successful" && (echo.&choice /n /c SN /m "¿Desea realizar otra operación [S,N]?" & if errorlevel 2 exit) || (echo   :: La conexion al servidor KMS fallo!                     ::&echo   :: Intentando conectarme a otro ...                       ::&echo   :: Por favor espera...                                    ::&echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo.& set /a i+=1 & goto ACTIVATIONOFFICE)
 pause
 :ACTIVATIONWINDOWS
+if %i%==1 set KMS_Sev=kms7.MSGuides.com
+if %i%==2 set KMS_Sev=kms8.MSGuides.com
+if %i%==3 set KMS_Sev=kms9.MSGuides.com
+if %i%==4 set KMS_Sev=kms.digiboy.ir
+if %i%==5 goto notsupported
+cscript //nologo slmgr.vbs /skms %KMS_Sev%:1688 >nul
+cscript //nologo slmgr.vbs /ato | find /i "successfully" || cscript //nologo slmgr.vbs /ato | find /i "correctamente" && (echo.&choice /n /c SN /m "¿Desea realizar otra operación [S,N]?" & if errorlevel 2 exit) || (echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo   :: La conexion al servidor KMS fallo!                     ::&echo   :: Intentando conectarme a otro ...                       ::&echo   :: Por favor espera...                                    ::&echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo.& set /a i+=1 & goto SERVIS)
+goto :Principal
+:WINDOWSACTIVATION
 	mode con cols=64 lines=11
 	cls>nul
 	cls
@@ -1488,31 +1578,30 @@ pause
 	choice /c 12345 >nul
 	SET SERVID=%ERRORLEVEL%
 	IF %SERVID% EQU 1 (
-	Echo Procederemos a introducir el servidor kms7.msguides.com.
-	::cscript //nologo slmgr /skms kms7.msguides.com> nul&echo ============================================================================&echo.&echo.
+	Echo   :: Introduciendo el servidor kms7.msguides.com.
 	slmgr /skms kms7.msguides.com
-	echo ============================================================================&echo.&echo.
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo.&echo.
 	slmgr /ato
 	goto :ACTIVATIONWINDOWS
 		)
 	IF %SERVID% EQU 2 (
-	Echo Procederemos a introducir el servidor kms8.msguides.com.
+	Echo   :: Introduciendo el servidor kms8.msguides.com.
 	slmgr /skms kms8.msguides.com
-	echo ============================================================================&echo.&echo.
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo.&echo.
 	slmgr /ato
 	goto :ACTIVATIONWINDOWS
 	)
 	IF %SERVID% EQU 3 (
-	Echo Procederemos a introducir el servidor kms9.msguides.com.
+	Echo   :: Introduciendo el servidor kms9.msguides.com.
 	slmgr /skms kms9.msguides.com
-	echo ============================================================================&echo.&echo.
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo.&echo.
 	slmgr /ato
 	goto :ACTIVATIONWINDOWS
 	)
 	IF %SERVID% EQU 4 (
-	Echo Procederemos a introducir el servidor kms.digiboy.ir 
+	Echo   :: Introduciendo el servidor kms.digiboy.ir 
 	slmgr /skms kms.digiboy.ir 
-	echo ============================================================================&echo.&echo.
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo.&echo.
 	slmgr /ato
 	goto :ACTIVATIONWINDOWS
 	)
@@ -1520,5 +1609,5 @@ pause
 	goto :Principal
 	)
 :notsupported
-echo.&echo ============================================================================&echo Lo siento! Tu versión no es compatible.
+echo.&echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo   :: Lo siento! Tu versión no es compatible.                ::
 endlocal
