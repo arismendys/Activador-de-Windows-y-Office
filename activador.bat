@@ -1559,7 +1559,7 @@ if %i%==3 set KMS_Sev=kms9.MSGuides.com
 if %i%==4 set KMS_Sev=kms.digiboy.ir
 if %i%==5 goto notsupported
 cscript //nologo slmgr.vbs /skms %KMS_Sev%:1688 >nul
-cscript //nologo slmgr.vbs /ato | find /i "successfully" || cscript //nologo slmgr.vbs /ato | find /i "correctamente" && (echo.&choice /n /c SN /m "¿Desea realizar otra operación [S,N]?" & if errorlevel 2 exit) || (echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo   :: La conexion al servidor KMS fallo!                     ::&echo   :: Intentando conectarme a otro ...                       ::&echo   :: Por favor espera...                                    ::&echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo.& set /a i+=1 & goto SERVIS)
+cscript //nologo slmgr.vbs /ato | find /i "successfully" || cscript //nologo slmgr.vbs /ato | find /i "correctamente" && (echo.&choice /n /c SN /m "¿Desea realizar otra operación [S,N]?" & if errorlevel 2 exit) || (echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo   :: La conexion al servidor KMS fallo!                     ::&echo   :: Intentando conectarme a otro ...                       ::&echo   :: Por favor espera...                                    ::&echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::&echo.& set /a i+=1 & goto ACTIVATIONWINDOWS)
 goto :Principal
 :WINDOWSACTIVATION
 	mode con cols=64 lines=11
