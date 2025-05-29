@@ -2,7 +2,7 @@
 :: NOMBRE:	Activacion de Windows y Office
 :: DESCRIPCIÓN:	Esta Herramienta sirve para realizar la Activacion de varias versiones de Windows y Office
 :: AUTOR:	MarteTeam.
-:: VERSIÓN:	3.2.0.0
+:: VERSIÓN:	3.3.0.0
 :: WEBSITE:	http://marteteam.com
 :: =========================================================================================================
 
@@ -123,7 +123,7 @@ REM cls
 	REM echo   :: Este activador contiene los siguientes sistemas,             ::
 	REM echo   :: Windows 7, 8.1, 10, 11                                       ::  
 	REM echo   :: Server 2008, 2008 R2, 2012, 2012 R2, 2016, 2019, 2022, 2025  ::
-	REM echo   :: Office 2013, 2016, 2019, 2021                                ::
+	REM echo   :: Office 2013, 2016, 2019, 2021, 2024                          ::
 	REM echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::pause
 :Principal
@@ -1340,9 +1340,10 @@ mode con cols=64 lines=13
 	echo   :: Presione 2 - Elija su paquete de Office 2016           ::
 	echo   :: Presione 3 - Elija su paquete de Office 2019           ::
 	echo   :: Presione 4 - Elija su paquete de Office 2021           ::
-	echo   :: Presione 5 - Volver al Menu Principal                  ::
+	echo   :: Presione 5 - Elija su paquete de Office 2024           ::
+	echo   :: Presione 6 - Volver al Menu Principal                  ::
 	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-	choice /c 12345 >nul
+	choice /c 123456 >nul
 	SET OFFICEOPTION=%ERRORLEVEL%
 	IF %OFFICEOPTION% EQU 1 (
 		goto :VERMENUOFFICE13
@@ -1537,6 +1538,52 @@ mode con cols=64 lines=13
 		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		echo   :: Activating your Office...                              ::
 		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:K2HT4 >nul&cscript //nologo ospp.vbs /inpkey:KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4 >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		goto :ACTIVATIONOFFICE
+	)
+	IF %EDITOFFICEOPTION% EQU 4 (
+		goto :OFFICE
+	)
+::Apartir de esta parte comienza el menu de Office 2024
+:VERMENUOFFICE24
+	mode con cols=64 lines=11
+	cls>nul
+	cls
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Elija su paquete de Office 2024                        ::
+	echo   :: Sub Menu                                               ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo   :: Presione 1 - ProPlus 2024                              ::
+	echo   :: Presione 2 - Project 2024                              ::
+	echo   :: Presione 3 - Visio 2024                                ::
+	echo   :: Presione 4 - Voler al Menu anterior                    ::
+	echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	choice /c 1234 >nul
+	SET EDITOFFICEOPTION=%ERRORLEVEL%
+	IF %EDITOFFICEOPTION% EQU 1 (
+		Echo   :: Procederemos a Introduciendo la clave de ProPlus 2024. ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2024VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProPlus2024VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
+		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:GCVGB >nul&cscript //nologo ospp.vbs /inpkey:XJ2XN-FW8RK-P4HMP-DKDBV-GCVGB >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		goto :ACTIVATIONOFFICE
+	)
+	IF %EDITOFFICEOPTION% EQU 2 (
+		Echo   :: Procederemos a Introduciendo la clave de Project 2024. ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2024VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\ProjectPro2024VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
+		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:76HF4 >nul&cscript //nologo ospp.vbs /inpkey:FQQ23-N4YCY-73HQ3-FM9WC-76HF4 >nul&set i=1
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		goto :ACTIVATIONOFFICE
+	)
+	IF %EDITOFFICEOPTION% EQU 3 (
+		Echo   :: Procederemos a Introduciendo la clave de Visio 2024.   ::
+		(if exist "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles%\Microsoft Office\Office16")&(if exist "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" cd /d "%ProgramFiles(x86)%\Microsoft Office\Office16")&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2024VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)&(for /f %%x in ('dir /b ..\root\Licenses16\VisioPro2024VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%%x" >nul)
+		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		echo   :: Activating your Office...                              ::
+		cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /unpkey:YY89G >nul&cscript //nologo ospp.vbs /inpkey:B7TN8-FJ8V3-7QYCP-HQPMV-YY89G >nul&set i=1
 		echo   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 		goto :ACTIVATIONOFFICE
 	)
